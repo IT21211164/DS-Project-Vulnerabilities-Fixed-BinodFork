@@ -5,7 +5,7 @@ import { Admin, Instructor, Student } from "../../configurations/userRoles";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../features/User.slice";
-import { Link, useNavigatem , Outlet } from "react-router-dom";
+import { Link, useNavigate , Outlet } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { RiLogoutCircleRFill } from "react-icons/ri";
