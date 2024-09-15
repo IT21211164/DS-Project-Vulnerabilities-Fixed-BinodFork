@@ -1,8 +1,6 @@
-import { FaLink } from "react-icons/fa6";
 import { MdOutlinePlayLesson } from "react-icons/md";
 import { RiShoppingCartFill } from "react-icons/ri";
-import { FaGraduationCap } from "react-icons/fa6";
-import { FaHeartCirclePlus } from "react-icons/fa6";
+import { FaGraduationCap, FaHeartCirclePlus } from "react-icons/fa6";
 import { IoSettings } from "react-icons/io5";
 
 const studentSidebarData = [

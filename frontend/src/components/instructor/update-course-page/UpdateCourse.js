@@ -1,11 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import axios from "axios";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from "react-hot-toast";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FiEdit2 } from "react-icons/fi";
-
-import { useNavigate } from 'react-router-dom';
 
 import '../create-course-page/createcourse.css'
 

@@ -1,8 +1,7 @@
 import React, { useState , useEffect} from "react";
 import { toast } from "react-hot-toast";
 import axios from "axios";
-import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Image1 from '../../../images/updateContent.jpg'
 
 function UpdateContent() {
