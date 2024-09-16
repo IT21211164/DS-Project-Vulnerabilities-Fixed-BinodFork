@@ -150,7 +150,7 @@ function InstructorSignup() {
 
         <span className="topic">Greetings, Instructor!</span>
         <p className="support-phrase">
-          Let's ignite curiosity and passion for learning together.
+          Let&apos;s ignite curiosity and passion for learning together.
         </p>
 
         <form className="form-area" onSubmit={registrationFormHandler}>

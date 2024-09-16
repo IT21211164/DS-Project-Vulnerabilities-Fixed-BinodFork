@@ -22,7 +22,7 @@ function EnrollmentRecord({ record, unenrollFromCourse }) {
             <p className="modal-message">
               Are you sure you want to unenroll from this course? This action
               cannot be undone. You will lose all the access to this course once
-              you click 'confirm'
+              you click &apos;confirm&apos;
             </p>
             <div className="modal-confirm-btns">
               <button

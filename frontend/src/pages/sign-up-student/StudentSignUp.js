@@ -150,7 +150,7 @@ function StudentSignup() {
 
         <span className="topic">Greetings, Student! </span>
         <p className="support-phrase">
-          Let's unlock your potential and achieve greatness together.
+          Let&apos;s unlock your potential and achieve greatness together.
         </p>
 
         <form className="form-area" onSubmit={registrationFormHandler}>

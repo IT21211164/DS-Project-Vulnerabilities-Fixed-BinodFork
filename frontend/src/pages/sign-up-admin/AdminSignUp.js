@@ -152,7 +152,7 @@ function AdminSignup() {
 
         <span className="topic">Greetings, Admin!</span>
         <p className="support-phrase">
-          Let's collaborate to create a vibrant learning community.
+          Let&apos;s collaborate to create a vibrant learning community.
         </p>
 
         <form className="form-area" onSubmit={registrationFormHandler}>

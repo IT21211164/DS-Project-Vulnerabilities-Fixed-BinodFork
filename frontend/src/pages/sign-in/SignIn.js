@@ -139,7 +139,7 @@ function SignIn() {
           </button>
 
           <div className="link-login">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <span className="login-connector">Signup</span>
           </div>
         </form>

@@ -59,9 +59,9 @@ function NotificationPage() {
         Send Notifications
       </Typography>
       <Typography align="center" marginBottom={2}>
-      "Welcome, Admin! This is your control panel for managing notifications. 
+      &quot;Welcome, Admin! This is your control panel for managing notifications. 
       Stay informed and keep your users engaged by sending important updates via SMS and email. 
-      Take charge of your communication strategy and ensure your messages reach the right audience at the right time."
+      Take charge of your communication strategy and ensure your messages reach the right audience at the right time.&quot;
       </Typography>
       <Button variant="contained" href="/admin/dashboard/notification/history" style={{ marginTop: 10, marginBottom: 30,marginRight:10,backgroundColor:"#92e3a9"}}>
           <Typography color={'black'}>Notification History</Typography>
