@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./instructor-dash.styles.css";
 import instructorLinks from "../../data/instructor_sidebar_data";
-import { Admin, Instructor, Student } from "../../configurations/userRoles";
+import { Admin, Instructor } from "../../configurations/userRoles";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../features/User.slice";
