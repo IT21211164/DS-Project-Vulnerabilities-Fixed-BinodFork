@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from "react-hot-toast";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FiEdit2 } from "react-icons/fi";
+import { sanitizeObject } from '../../../sanitization_functions';
 
 import '../create-course-page/createcourse.css'
 
@@ -33,7 +34,7 @@ function UpdateCourse() {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`http://localhost:3500/learnup/api/course-management/get-course/${id}`);
-                console.log(response);
+                console.log(sanitizeObject(response));
                 setCourse(response.data); // Update the course 
                 setCourseImage(response.data.courseImage);
                 setCourseName(response.data.courseName)
@@ -53,9 +54,7 @@ function UpdateCourse() {
         fetchData();
     }, [id]);
 
-  
-  
-  
+
     const [editingOptionIndex, setEditingOptionIndex] = useState(-1);
     const addOptionToTheList = () => {
       if (lectureVideo === "" || lectureName === ""  || lectureNote === "") {

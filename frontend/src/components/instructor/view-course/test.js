@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaDollarSign } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import { sanitizeObject } from '../../../sanitization_functions';
 
 import './ViewCourse.css'
 
@@ -20,35 +21,6 @@ function ViewCourse() {
     const [coursePrice, setCoursePrice] = useState();
     const [courseContents, setCourseContents] = useState([]);
     const [skills, setSkills] = useState([]);
-
-
-    function sanitizeInput(input) {
-        if (typeof input === 'string') {
-          return input
-            .replace(/\\/g, '\\\\')    // Escape backslashes
-            .replace(/"/g, '\\"')      // Escape double quotes
-            .replace(/'/g, "\\'")      // Escape single quotes
-            .replace(/\n/g, '\\n')     // Escape newlines
-            .replace(/\r/g, '\\r');    // Escape carriage returns
-        }
-        return input;
-      }
-      
-      function sanitizeObject(obj) {
-        if (typeof obj === 'object' && obj !== null) {
-          const sanitizedObj = {};
-          for (const key in obj) {
-            if (obj.hasOwnProperty(key)) {
-              sanitizedObj[key] = sanitizeObject(obj[key]);
-            }
-          }
-          return sanitizedObj;
-        } else if (Array.isArray(obj)) {
-          return obj.map(item => sanitizeObject(item));
-        }
-        return sanitizeInput(obj);
-      }
-    
 
     useEffect(() => {
         const fetchData = async () => {

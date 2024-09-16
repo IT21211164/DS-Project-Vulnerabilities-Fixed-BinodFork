@@ -1,4 +1,5 @@
 const axios = require('axios');
+const {sanitizeObject} = require('./sanitization_functions')
 
 const sendConfirmationSMS = async (course_id) => {
   try {
@@ -9,10 +10,10 @@ const sendConfirmationSMS = async (course_id) => {
         message:`Dear student, you have successfully enrolled in course ${course_id}`,
         to:"94771138876"
     });
-    console.log(response.data);
+    console.log(sanitizeObject(response.data));
     return response.data; // Return the response from Notify.lk
   } catch (error) {
-    console.error(error.response.data);
+    console.error(sanitizeObject(error.response.data));
     res.status(500).send('Failed to send notification');
 }
 };

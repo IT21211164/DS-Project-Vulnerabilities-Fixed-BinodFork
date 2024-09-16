@@ -18,7 +18,6 @@ function CourseManagement() {
 				"http://localhost:3500/learnup/api/course-management/get-all-courses"
 			);
 			if (response.data) {
-				console.log(response.data);
 				setCourses(response.data);
 			}
 		} catch (error) {

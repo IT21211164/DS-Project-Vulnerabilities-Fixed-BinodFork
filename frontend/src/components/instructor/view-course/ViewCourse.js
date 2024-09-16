@@ -5,6 +5,7 @@ import { FaDollarSign } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { MdOutlineDelete } from "react-icons/md";
 import { BiEditAlt } from "react-icons/bi";
+import { sanitizeObject, sanitizeInput } from '../../../sanitization_functions';
 
 import './ViewCourse.css'
 
@@ -31,7 +32,7 @@ function ViewCourse() {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`http://localhost:3500/learnup/api/course-management/get-course/${id}`);
-                console.log(response);
+                console.log(sanitizeObject(response));
                 setCourse(response.data); // Update the course 
                 setCourseImage(response.data.courseImage);
                 setCourseName(response.data.courseName)
@@ -44,15 +45,12 @@ function ViewCourse() {
                 setSkills(response.data.skills)
                 
             } catch (error) {
-                console.error('Error fetching products:', error.message);
+                console.error('Error fetching products:', sanitizeInput(error.message));
             }
         };
     
         fetchData();
     }, [id]);
-
-    console.log(course);
-    console.log(courseContents);
 
     function getYouTubeVideoId(url) {
         // Regular expression to match YouTube URL patterns
@@ -71,17 +69,17 @@ function ViewCourse() {
         if (shouldDelete) {
           try {
             const response = await axios.delete(`http://localhost:3500/learnup/api/course-management/getcourse/${courseId}/content/${id}`);
-            console.log('Response status:', response.status);
+            console.log('Response status:', sanitizeInput(response.status));
     
             if (response.status === 200) {
               alert('Content deleted');
               setCourseContents(courseContents.filter((content) => content._id !== id));
             } else {
-              console.error('Failed to delete Content. Unexpected status:', response.status);
+              console.error('Failed to delete Content. Unexpected status:', sanitizeInput(response.status));
               alert('Failed to delete Content.');
             }
           } catch (error) {
-            console.error('Error:', error.message);
+            console.error('Error:', sanitizeInput(error.message));
             alert('An error occurred while deleting the Content.');
           }
         }
@@ -93,18 +91,18 @@ function ViewCourse() {
         if (shouldDelete) {
           try {
             const response = await axios.delete(`http://localhost:3500/learnup/api/course-management/delete-courses/${id}`);
-            console.log('Response status:', response.status);
+            console.log('Response status:', sanitizeInput(response.status));
     
             if (response.status === 200) {
               alert('Course deleted');
               setCourseContents(courseContents.filter((content) => content._id !== id));
               navigate('/instructor/dashboard/courses');
             } else {
-              console.error('Failed to delete Content. Unexpected status:', response.status);
+              console.error('Failed to delete Content. Unexpected status:', sanitizeInput(response.status));
               alert('Failed to delete Course.');
             }
           } catch (error) {
-            console.error('Error:', error.message);
+            console.error('Error:', sanitizeInput(error.message));
             alert('An error occurred while deleting the Course.');
           }
         }

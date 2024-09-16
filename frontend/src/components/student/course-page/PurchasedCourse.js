@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { FaDollarSign } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import { sanitizeObject } from '../../../sanitization_functions';
 
 
 import "./ViewCourse.css";
@@ -27,7 +28,7 @@ function PurchasedCourse() {
         const response = await axios.get(
           `http://localhost:3500/learnup/api/course-management/get-course/${id}`
         );
-        console.log(response);
+        console.log(sanitizeObject(response));
         setCourse(response.data);
         setCourseImage(response.data.courseImage);
         setCourseName(response.data.courseName);
@@ -44,9 +45,6 @@ function PurchasedCourse() {
 
     fetchData();
   }, [id]);
-
-  console.log(course);
-  console.log(courseContents);
 
   function getYouTubeVideoId(url) {
     // Regular expression to match YouTube URL patterns

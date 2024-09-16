@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Typography, Container, Box, List, ListItem, ListItemText, Button } from '@mui/material';
+import {sanitizeObject} from '../../sanitization_functions'
 
 const MessageTemplateList = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const MessageTemplateList = () => {
       try {
         const response = await axios.get('http://localhost:4003/learnup/api/notification/template-list');
         setTemplates(response.data);
-        console.log(response.data)
+        console.log(sanitizeObject(response.data))
       } catch (error) {
         console.error('Error fetching templat:', error);
         alert('Failed to fetch templates');

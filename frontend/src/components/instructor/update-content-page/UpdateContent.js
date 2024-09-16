@@ -1,7 +1,8 @@
 import React, { useState , useEffect} from "react";
 import { toast } from "react-hot-toast";
 import axios from "axios";
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { sanitizeObject, sanitizeInput } from "../../../sanitization_functions";
 import Image1 from '../../../images/updateContent.jpg'
 
 function UpdateContent() {
@@ -16,14 +17,14 @@ function UpdateContent() {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`http://localhost:3500/learnup/api/course-management/get-content/${id}`);
-                console.log(response);
+                console.log(sanitizeObject(response));
                 setLectureVideo(response.data.lectureVideo); // Update the course 
                 setLectureName(response.data.lectureName);
                 setLectureNote(response.data.lectureNote)
 
                 
             } catch (error) {
-                console.error('Error fetching products:', error.message);
+                console.error('Error fetching products:', sanitizeInput(error.message));
             }
         };
     
@@ -47,7 +48,7 @@ function UpdateContent() {
               
             }
           } catch (error) {
-            console.log(error);
+            console.log(sanitizeObject(error));
             toast.error("Something went wrong");
           }
         

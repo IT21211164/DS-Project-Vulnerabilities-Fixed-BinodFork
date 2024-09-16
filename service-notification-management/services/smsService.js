@@ -1,4 +1,5 @@
 const axios = require('axios');
+const {sanitizeObject} = require('./sanitization_functions')
 
 const sendSMS = async (recipientPhoneNo, message) => {
   try {
@@ -9,10 +10,10 @@ const sendSMS = async (recipientPhoneNo, message) => {
         message:message,
         to: `94${recipientPhoneNo.slice(-9)}`
     });
-    console.log(response.data);
+    console.log(sanitizeObject(response.data));
     return response.data; // Return the response from Notify.lk
   } catch (error) {
-    console.error(error.response.data);
+    console.error(sanitizeObject(error.response.data));
     res.status(500).send('Failed to send notification');
 }
 };
