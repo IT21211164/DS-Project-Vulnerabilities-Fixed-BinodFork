@@ -159,11 +159,12 @@ function UpdateCourse() {
               {/* supplier full name */}
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='course_id_update' className="tender-proposal-label">
                     Course Id
                   </label>
                 </div>
                 <input
+                  id='course_id_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Course Id"
@@ -175,11 +176,12 @@ function UpdateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='course_name_update' className="tender-proposal-label">
                     Course Name
                   </label>
                 </div>
                 <input
+                  id='course_name_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Course Name"
@@ -191,11 +193,12 @@ function UpdateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='course_image_url_update' className="tender-proposal-label">
                     Image URL
                   </label>
                 </div>
                 <input
+                  id='course_image_url_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Image URL"
@@ -207,11 +210,12 @@ function UpdateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='course_specilaization_update' className="tender-proposal-label">
                     Specialization
                   </label>
                 </div>
                 <input
+                  id='course_specilaization_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Specialization"
@@ -223,11 +227,12 @@ function UpdateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='course_desc_update' className="tender-proposal-label">
                     Description
                   </label>
                 </div>
                 <textarea
+                  id='course_desc_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Description"
@@ -239,11 +244,12 @@ function UpdateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='coruse_price_update' className="tender-proposal-label">
                     Price
                   </label>
                 </div>
                 <input
+                  id='coruse_price_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Price"
@@ -255,11 +261,12 @@ function UpdateCourse() {
                 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='course_skills_update' className="tender-proposal-label">
                     skils
                   </label>
                 </div>
                 <input
+                  id='course_skills_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="skils"
@@ -274,9 +281,10 @@ function UpdateCourse() {
             <div className="item-populater-container">
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">Lecture Name</label>
+                  <label htmlFor='course_lecturer_name_update' className="tender-proposal-label">Lecture Name</label>
                 </div>
                 <input
+                  id='course_lecturer_name_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Video URL"
@@ -287,11 +295,12 @@ function UpdateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='course_video_url_update' className="tender-proposal-label">
                     Video URL
                   </label>
                 </div>
                 <input
+                  id='course_video_url_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Name"
@@ -302,11 +311,12 @@ function UpdateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor='lecture_note_update' className="tender-proposal-label">
                     Lecture note
                   </label>
                 </div>
                 <input
+                  id='lecture_note_update'
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Note"

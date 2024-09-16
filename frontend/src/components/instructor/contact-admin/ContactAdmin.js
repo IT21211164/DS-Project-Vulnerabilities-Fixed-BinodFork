@@ -63,16 +63,18 @@ function ContactAdmin() {
 					className="contact-admin-form-area"
 					onSubmit={sendInquiry}
 				>
-					<label className="contact-label">Topic</label>
+					<label htmlFor="contact_form_topic" className="contact-label">Topic</label>
 					<input
+						id="contact_form_topic"
 						className="contact-text-input"
 						value={topic}
 						onChange={(e) => {
 							setTopic(e.target.value);
 						}}
 					/>
-					<label className="contact-label">Description</label>
+					<label htmlFor="contact_form_desc" className="contact-label">Description</label>
 					<textarea
+						id="contact_form_desc"
 						className="contact-text-input-description"
 						value={description}
 						onChange={(e) => {

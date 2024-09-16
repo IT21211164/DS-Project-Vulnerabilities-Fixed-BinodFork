@@ -44,9 +44,10 @@ function AddContent() {
                 </div>
             <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">Lecture Video</label>
+                  <label htmlFor="lecture_video_add" className="tender-proposal-label">Lecture Video</label>
                 </div>
                 <input
+                  id="lecture_video_add"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Video URL"
@@ -57,11 +58,12 @@ function AddContent() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="lecturer_name_add" className="tender-proposal-label">
                     Lecture Name
                   </label>
                 </div>
                 <input
+                  id="lecturer_name_add"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Name"
@@ -72,11 +74,12 @@ function AddContent() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="lectuer_note_add" className="tender-proposal-label">
                     Lecture note
                   </label>
                 </div>
                 <input
+                  id="lectuer_note_add"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Note"

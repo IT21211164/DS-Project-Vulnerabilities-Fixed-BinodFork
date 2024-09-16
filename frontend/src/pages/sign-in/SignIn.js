@@ -96,9 +96,10 @@ function SignIn() {
         <form className="login-form-area" onSubmit={loginFormHandler}>
           <div className="set">
             <div className="label-box">
-              <label className="login-label">Email</label>
+              <label htmlFor="user_email" className="login-label">Email</label>
             </div>
             <input
+              id="user_email"
               type="text"
               className="login-input"
               placeholder="Enter your email"
@@ -116,9 +117,10 @@ function SignIn() {
 
           <div className="set">
             <div className="label-box">
-              <label className="login-label">Password</label>
+              <label htmlFor="user_password" className="login-label">Password</label>
             </div>
             <input
+              id="user_password"
               type="password"
               className="login-input"
               placeholder="Create a password"

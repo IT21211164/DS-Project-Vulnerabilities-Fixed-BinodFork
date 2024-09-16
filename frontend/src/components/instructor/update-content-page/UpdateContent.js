@@ -63,9 +63,10 @@ function UpdateContent() {
                 </div>
             <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">Lecture Video</label>
+                  <label htmlFor="lecture_video" className="tender-proposal-label">Lecture Video</label>
                 </div>
                 <input
+                  id="lecture_video"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Video URL"
@@ -76,11 +77,12 @@ function UpdateContent() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="lecture_name" className="tender-proposal-label">
                     Lecture Name
                   </label>
                 </div>
                 <input
+                  id="lecture_name"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Name"
@@ -91,11 +93,12 @@ function UpdateContent() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="lecture_note" className="tender-proposal-label">
                     Lecture note
                   </label>
                 </div>
                 <input
+                  id="lecture_note"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Note"

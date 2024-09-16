@@ -132,11 +132,12 @@ function CreateCourse() {
               {/* supplier full name */}
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="course_id" className="tender-proposal-label">
                     Course Id
                   </label>
                 </div>
                 <input
+                  id="course_name"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Course Id"
@@ -148,11 +149,12 @@ function CreateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="course_name" className="tender-proposal-label">
                     Course Name
                   </label>
                 </div>
                 <input
+                  id="course_name"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Course Name"
@@ -164,11 +166,12 @@ function CreateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="course_image_url" className="tender-proposal-label">
                     Image URL
                   </label>
                 </div>
                 <input
+                  id="course_image_url"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Image URL"
@@ -180,11 +183,12 @@ function CreateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="create_course_specialization" className="tender-proposal-label">
                     Specialization
                   </label>
                 </div>
                 <input
+                  id="create_course_specialization"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Specialization"
@@ -196,11 +200,12 @@ function CreateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="create_course_desc" className="tender-proposal-label">
                     Description
                   </label>
                 </div>
                 <textarea
+                  id="create_course_desc"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Description"
@@ -212,11 +217,12 @@ function CreateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="create_course_price" className="tender-proposal-label">
                     Price
                   </label>
                 </div>
                 <input
+                  id="create_course_price"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Price"
@@ -228,11 +234,12 @@ function CreateCourse() {
                 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="create_course_skills" className="tender-proposal-label">
                     skils
                   </label>
                 </div>
                 <input
+                  id="create_course_skills"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="skils"
@@ -247,9 +254,10 @@ function CreateCourse() {
             <div className="item-populater-container">
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">Lecture Video</label>
+                  <label htmlFor="create_lec_video" className="tender-proposal-label">Lecture Video</label>
                 </div>
                 <input
+                  id="create_lec_video"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Video URL"
@@ -260,11 +268,12 @@ function CreateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="create_lec_name" className="tender-proposal-label">
                     Lecture Name
                   </label>
                 </div>
                 <input
+                  id="create_lec_name"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Name"
@@ -275,11 +284,12 @@ function CreateCourse() {
 
               <div className="tender-proposal-set">
                 <div className="label-box">
-                  <label className="tender-proposal-label">
+                  <label htmlFor="create_lec_note" className="tender-proposal-label">
                     Lecture note
                   </label>
                 </div>
                 <input
+                  id="create_lec_note"
                   type="text"
                   className="tender-proposal-input"
                   placeholder="Lecture Note"

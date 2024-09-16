@@ -72,8 +72,9 @@ function InquiryInfo() {
           </p>
           
           <div className="response-container">
-            <label className="label">Add Admin Response:</label>
+            <label htmlFor="admin_response" className="label">Add Admin Response:</label>
             <textarea
+			  id="admin_response"
               className="response-textarea"
               value={adminResponse}
               onChange={(e) => setAdminResponse(e.target.value)}
