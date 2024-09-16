@@ -156,9 +156,10 @@ function StudentSignup() {
         <form className="form-area" onSubmit={registrationFormHandler}>
           <div className="set">
             <div className="label-box">
-              <label className="register-label">Username*</label>
+              <label htmlFor="student_username" className="register-label">Username*</label>
             </div>
             <input
+              id="student_username"
               type="text"
               className="register-input"
               placeholder="Enter your name"
@@ -176,9 +177,10 @@ function StudentSignup() {
 
           <div className="set">
             <div className="label-box">
-              <label className="register-label">Email*</label>
+              <label htmlFor="student_email" className="register-label">Email*</label>
             </div>
             <input
+              id="student_email"
               type="text"
               className="register-input"
               placeholder="Enter your email"
@@ -196,9 +198,10 @@ function StudentSignup() {
 
           <div className="set">
             <div className="label-box">
-              <label className="register-label">Phone Number*</label>
+              <label htmlFor="student_telephone" className="register-label">Phone Number*</label>
             </div>
             <input
+              id="student_telephone"
               type="number"
               className="register-input"
               placeholder="Enter your phone number"
@@ -216,9 +219,10 @@ function StudentSignup() {
 
           <div className="set">
             <div className="label-box">
-              <label className="register-label">Password*</label>
+              <label htmlFor="student_password" className="register-label">Password*</label>
             </div>
             <input
+              id="student_password"
               type="password"
               className="register-input"
               placeholder="Create a password"
@@ -236,9 +240,10 @@ function StudentSignup() {
 
           <div className="set">
             <div className="label-box">
-              <label className="register-label">Confirm Password*</label>
+              <label htmlFor="student_confirm_password" className="register-label">Confirm Password*</label>
             </div>
             <input
+              id="student_confirm_password"
               type="password"
               className="register-input"
               placeholder="Re-enter password"
