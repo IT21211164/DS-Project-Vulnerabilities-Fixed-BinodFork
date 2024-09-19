@@ -273,7 +273,7 @@ function StudentSignup() {
           <button type="submit" className="register-btn" disabled={lock}>
             sign up
           </button>
-          <button type="button" className="register-btn-google" onClick={() => googleAuth()}>
+          <button type="button" className="register-btn-google" onClick={googleAuth}>
             <FcGoogle className="google-icon" /> sign up with google
           </button>
 

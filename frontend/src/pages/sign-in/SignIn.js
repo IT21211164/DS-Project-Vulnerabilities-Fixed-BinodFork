@@ -205,7 +205,7 @@ function SignIn() {
           
           <span className="link-login" style={{textAlign:'center' , width:'100%', display:'flex', justifyContent:'center'}}>or</span>
 
-          <button onClick={() => googleAuth()} type="button" className="login-btn-google">
+          <button onClick={googleAuth} type="button" className="login-btn-google">
             <FcGoogle className="google-icon"/>sign in with google
           </button>
 
