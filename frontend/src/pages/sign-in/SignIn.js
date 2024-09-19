@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import logo from "../../images/learnup.png";
 import { toast } from "react-hot-toast";
@@ -86,11 +86,11 @@ function SignIn() {
     window.location.href = url
   }
 
-  async function googleAuth(){
+  const googleAuth = useCallback(async() => {
     const response = await fetch('http://127.0.0.1:4000/request')
     const data = await response.json()
     consentScreenNavigator(data.url)
-  }
+  },[])
 
   const loginFormHandler = async (e) => {
     e.preventDefault();
