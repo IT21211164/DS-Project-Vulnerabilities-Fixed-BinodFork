@@ -2,12 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import logo from "../../images/learnup.png";
 import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../features/User.slice";
 import SigninBanner from "../../images/signin.jpg";
 import user_roles_list from "../../configurations/userRoles";
 import "./signin.styles.css";
+import { FcGoogle } from "react-icons/fc";
+
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search)
+}
 
 function SignIn() {
   const navigate = useNavigate();
@@ -17,6 +22,54 @@ function SignIn() {
   const [email, setEmail] = useState("");
   const { Student, Admin, Instructor } = user_roles_list;
   const { roles } = useSelector((state) => state.user);
+
+  const query = useQuery()
+
+  useEffect(()=>{
+    const fetchUserAuthData = async() => {
+      const userAuthData = query.get('data');
+
+    if (userAuthData) {
+      try {
+        const parsedData = JSON.parse(decodeURIComponent(userAuthData));
+        const { email } = parsedData;
+
+        const response = await axios.post(
+          "http://localhost:4000/learnup/api/user-management/auth/oauthlogin",
+          {
+            email,
+          },
+          { withCredentials: true, credentials: "include" }
+        )
+        dispatch(
+          login({
+            token: response.data.access_token,
+            username: response.data.username,
+            user_id: response.data._id,
+            profile_picture: response.data.profile_picture,
+            roles: response.data.roles,
+          })
+        );
+
+        if (response.data.roles.includes(Admin)) {
+          return navigate("/admin/dashboard");
+        }
+        if (response.data.roles.includes(Instructor)) {
+          return navigate("/instructor/dashboard/courses");
+        }
+        if (response.data.roles.includes(Student)) {
+          return navigate("/student/dashboard");
+        }
+        
+      } catch (error) {
+        console.log(error);
+        toast.error(error.response.data.error || error.message);
+      }
+    }
+    }
+
+    fetchUserAuthData()
+  }, [query])
 
   useEffect(() => {
     if (email && password) {
@@ -28,6 +81,16 @@ function SignIn() {
 
   const [passwordError, setPasswordError] = useState("");
   const [emailError, setEmailError] = useState("");
+
+  const consentScreenNavigator = (url) => {
+    window.location.href = url
+  }
+
+  const googleAuth = async() => {
+    const response = await fetch('http://127.0.0.1:4000/request')
+    const data = await response.json()
+    consentScreenNavigator(data.url)
+  }
 
   const loginFormHandler = async (e) => {
     e.preventDefault();
@@ -139,10 +202,16 @@ function SignIn() {
           <button type="submit" className="login-btn" disabled={lock}>
             sign in
           </button>
+          
+          <span className="link-login" style={{textAlign:'center' , width:'100%', display:'flex', justifyContent:'center'}}>or</span>
+
+          <button onClick={() => googleAuth()} type="button" className="login-btn-google">
+            <FcGoogle className="google-icon"/>sign in with google
+          </button>
 
           <div className="link-login">
             Don&apos;t have an account?{" "}
-            <span className="login-connector">Signup</span>
+            <span className="login-connector" onClick={() => navigate("/create-account/student")}>Signup</span>
           </div>
         </form>
       </div>

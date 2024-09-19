@@ -21,7 +21,7 @@ const studentSchema = mongoose.Schema(
 
     phone_number: {
       type: String,
-      required: [true, "valid phone number is required!"],
+      required: false,
     },
 
     profile_picture: {

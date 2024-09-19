@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import SignupBanner from "../../images/student-signup.jpg";
 import "./student-signup.styles.css";
+import { FcGoogle } from "react-icons/fc";
 
 function StudentSignup() {
   const navigate = useNavigate();
@@ -56,6 +57,16 @@ function StudentSignup() {
       setLock(true);
     }
   }, [email, username, password, confirmPassword, nameError, phoneNumber]);
+
+  const consentScreenNavigator = (url) => {
+    window.location.href = url
+  }
+
+  const googleAuth = async() => {
+    const response = await fetch('http://127.0.0.1:4000/request')
+    const data = await response.json()
+    consentScreenNavigator(data.url)
+  }
 
   const registrationFormHandler = async (e) => {
     e.preventDefault();
@@ -262,6 +273,9 @@ function StudentSignup() {
           <button type="submit" className="register-btn" disabled={lock}>
             sign up
           </button>
+          <button type="button" className="register-btn-google" onClick={() => googleAuth()}>
+            <FcGoogle className="google-icon" /> sign up with google
+          </button>
 
           <div className="link-register">
             Already have an account?{" "}
@@ -272,6 +286,8 @@ function StudentSignup() {
               Sign In
             </span>
           </div>
+
+          
         </form>
       </div>
       {/* this is the part related to the image */}

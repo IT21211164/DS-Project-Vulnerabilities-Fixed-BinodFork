@@ -21,6 +21,9 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/oauth' , require('./routes/oauth.routes'))
+app.use('/request' , require('./routes/request.routes'))
+
 
 app.get("/learnup/api/user-management", (req, res) => {
   res.send("user managers service responded");
