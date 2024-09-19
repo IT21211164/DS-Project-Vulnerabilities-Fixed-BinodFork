@@ -35,7 +35,7 @@ const sendAuthRequest = async(req,res,next) => {
         const hashedPassword = await bcrypt.hash(uuid, saltRounds);
 
         //check provided email is already registered as any role
-        let duplicate = await studentModel.findOne({ email: userData.email }).exec();
+        const duplicate = await studentModel.findOne({ email: userData.email }).exec();
 
         // if (!duplicate) {
         //     duplicate = await instructorModel.findOne({ email: userData.email }).exec();

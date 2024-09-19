@@ -11,9 +11,8 @@ const oAuthUserLogin = async (req, res) => {
   const { email } = req.body;
 
   try {
-    let foundUser;
     // find if entered email and password belongs to a student account
-    foundUser = await studentModel.findOne({ email }).exec();
+    const foundUser = await studentModel.findOne({ email }).exec();
 
     //check if there is a matching user
     if (!foundUser) {
