@@ -63,7 +63,7 @@ const sendAuthRequest = async(req,res,next) => {
     }
     catch(error){
         console.log('Error occured when signing in with google!');
-        response.redirect('http://localhost:3000');
+        res.redirect('http://localhost:3000');
         console.log(error.message)  
     }
 }
