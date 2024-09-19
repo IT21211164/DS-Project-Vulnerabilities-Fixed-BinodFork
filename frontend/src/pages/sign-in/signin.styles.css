@@ -154,6 +154,7 @@
 .login-connector {
   font-weight: 550;
   text-decoration: underline;
+  color: inherit;
 }
 
 .login-connector:hover {

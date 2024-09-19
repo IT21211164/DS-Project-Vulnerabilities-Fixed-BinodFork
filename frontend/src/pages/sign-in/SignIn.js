@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import logo from "../../images/learnup.png";
 import { toast } from "react-hot-toast";
-import { useNavigate , useLocation} from "react-router-dom";
+import { useNavigate , useLocation, Link} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../features/User.slice";
 import SigninBanner from "../../images/signin.jpg";
@@ -209,9 +209,9 @@ function SignIn() {
             <FcGoogle className="google-icon"/>sign in with google
           </button>
 
-          <div className="link-login">
+          <div className="link-login" >
             Don&apos;t have an account?{" "}
-            <span className="login-connector" onClick={() => navigate("/create-account/student")}>Signup</span>
+            <Link to="/create-account/student" className="login-connector" >Signup</Link>
           </div>
         </form>
       </div>
