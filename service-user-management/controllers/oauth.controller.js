@@ -29,7 +29,6 @@ const sendAuthRequest = async(req,res,next) => {
         await oAuth2Client.setCredentials(response.tokens)
         console.log('Token Received!')
         const user = oAuth2Client.credentials
-        console.log('credentials', user);
         const userData = await getUserDetailsViaAuth(user.access_token)
         
         const saltRounds = await bcrypt.genSalt(10);
