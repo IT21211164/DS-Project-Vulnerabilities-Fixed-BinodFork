@@ -62,7 +62,7 @@ function StudentSignup() {
     window.location.href = url
   }
 
-  const googleAuth = async() => {
+  async function googleAuth(){
     const response = await fetch('http://127.0.0.1:4000/request')
     const data = await response.json()
     consentScreenNavigator(data.url)
