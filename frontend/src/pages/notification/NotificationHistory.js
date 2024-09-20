@@ -58,7 +58,7 @@ function NotificationHistory() {
           <FormControlLabel value="email" control={<Radio />} label="Email History" />
         </RadioGroup>
       </Box>
-      {selectedOption == "sms"?
+      {selectedOption === "sms"?
         <Box mb={4}>
         <Typography variant="h5" gutterBottom>
           SMS History

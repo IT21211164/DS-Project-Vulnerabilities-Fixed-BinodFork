@@ -16,7 +16,7 @@ function NotificationPage() {
 
   const handleSendSMS = async () => {
     try {
-      if(selectedSMSOption == "one"){
+      if(selectedSMSOption === "one"){
         await axios.post('http://localhost:4003/learnup/api/notification/send-sms', { recipientPhoneNo, message });
         toast.success("SMS sent successfully!")
       }
@@ -31,7 +31,7 @@ function NotificationPage() {
 
   const handleSendEmail = async () => {
     try {
-      if(selectedEmailOption == "one"){
+      if(selectedEmailOption === "one"){
         await axios.post('http://localhost:4003/learnup/api/notification/send-email', { recipientEmail, subject, text });
         toast.success("Email sent successfully!")
       }
@@ -77,7 +77,7 @@ function NotificationPage() {
                   <FormControlLabel value="one" control={<Radio />} label="Send One" />
                   <FormControlLabel value="all" control={<Radio />} label="Send All" />
                 </RadioGroup>
-                {selectedSMSOption == "one"?
+                {selectedSMSOption === "one"?
                   <TextField
                   fullWidth
                   label="Enter Recipient Phone Number"
@@ -110,7 +110,7 @@ function NotificationPage() {
                   <FormControlLabel value="one" control={<Radio />} label="Send One" />
                   <FormControlLabel value="all" control={<Radio />} label="Send All" />
                 </RadioGroup>
-                {selectedEmailOption == "one"?
+                {selectedEmailOption === "one"?
                 <TextField
                 fullWidth
                 label="Enter recipient email"
