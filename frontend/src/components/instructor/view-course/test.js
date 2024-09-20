@@ -114,6 +114,7 @@ function ViewCourse() {
                                 <div className='view-content-list-item-image' key={index}>
                                 <iframe
                                     style={{ width: '100%', height: '100%' }}
+                                    title="lecture video"
                                     src={`https://www.youtube.com/embed/${getYouTubeVideoId(content.lectureVideo)}`}
                                     allowFullScreen
                                 ></iframe>
