@@ -61,6 +61,7 @@ function ShoppingCart() {
           <span
             className="insight-container"
             onClick={() => dispatch(clearCart())}
+            aria-hidden="true"
           >
             <span className="insight-icon">
               <GrPowerReset />

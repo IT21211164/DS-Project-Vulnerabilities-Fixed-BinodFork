@@ -16,6 +16,7 @@ function EnrollmentRecord({ record, unenrollFromCourse }) {
         <div
           className="unenroll-confirmation-model"
           onClick={() => setShowModal(false)}
+          aria-hidden="true"
         >
           <div className="enr-model-container">
             <div className="modal-info-ribbon">Unenrollment Confirmation?</div>

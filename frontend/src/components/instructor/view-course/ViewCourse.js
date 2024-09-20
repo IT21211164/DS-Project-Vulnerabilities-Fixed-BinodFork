@@ -205,7 +205,7 @@ function ViewCourse() {
                     <span className='view-course-update'>Update</span>
                 </div>
                 </Link>
-                <div className='view-course-btn-cont' onClick={() => handleCourseDelete(courseId)}>
+                <div className='view-course-btn-cont' onClick={() => handleCourseDelete(courseId)} aria-hidden="true">
                 <span className='view-course-update'>Delete</span>
                 </div>
             </div>

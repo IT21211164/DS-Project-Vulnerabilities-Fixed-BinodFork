@@ -107,7 +107,7 @@ function UpdateContent() {
                 />
               </div>
                 <div className="add-content-btn-container"
-                 onClick={() => ContentUpdateFormHandler()}>
+                 onClick={() => ContentUpdateFormHandler()} aria-hidden="true">
                 
               <div className="add-content-btn-form">  
                     <span className="add-content-btn-text">Update</span>   

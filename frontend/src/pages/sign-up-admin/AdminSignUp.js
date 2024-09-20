@@ -270,6 +270,7 @@ function AdminSignup() {
             <span
               className="login-connector"
               onClick={() => navigate("/sign-in")}
+              aria-hidden="true"
             >
               Sign In
             </span>

@@ -88,7 +88,7 @@ function AddContent() {
                 />
               </div>
                 <div className="add-content-btn-container"
-                onClick={() => tenderQuestionFormHandler()}>
+                onClick={() => tenderQuestionFormHandler()} aria-hidden="true">
               <div className="add-content-btn-form">  
                     <span className="add-content-btn-text">Add</span>   
               </div>

@@ -79,7 +79,7 @@ function AdminDashboard() {
             );
           })}
 
-          <div className="sidebar-link logout" onClick={() => logoutHandler()}>
+          <div className="sidebar-link logout" onClick={() => logoutHandler()} aria-hidden="true">
             <span className="sidebar-link-icon">
               <RiLogoutCircleRFill />
             </span>
