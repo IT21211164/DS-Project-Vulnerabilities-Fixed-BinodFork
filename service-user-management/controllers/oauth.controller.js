@@ -55,7 +55,7 @@ const sendAuthRequest = async(req,res,next) => {
                 });
             
               } catch (error) {
-                res.redirect(`http://localhost:3000/create-account/student`)
+                res.redirect("http://localhost:3000/create-account/student")
               }
         }
             const serializedObject = encodeURIComponent(JSON.stringify(userData))

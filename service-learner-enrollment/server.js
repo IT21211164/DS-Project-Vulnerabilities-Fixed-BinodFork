@@ -37,7 +37,7 @@ app.use(errorHandler);
 let serverPromise = new Promise((resolve, reject) => {
   mongoose.connection.once("open", () => {
     console.log(
-      `🚀 data connection with course enrollment collection established! 🚀`
+      "🚀 data connection with course enrollment collection established! 🚀"
     );
     const server = app.listen(PORT, () => {
       console.log(

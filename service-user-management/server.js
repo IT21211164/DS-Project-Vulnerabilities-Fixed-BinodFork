@@ -43,7 +43,7 @@ app.use(errorHandler);
 
 let serverPromise = new Promise((resolve, reject) => {
   mongoose.connection.once("open", () => {
-    console.log(`🚀 data connection with users collection established! 🚀`);
+    console.log("🚀 data connection with users collection established! 🚀");
     const server = app.listen(PORT, () => {
       console.log(
         `👦 User management service is up and running on port: ${PORT} 👦`

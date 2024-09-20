@@ -8,7 +8,7 @@ const dbConnect = asyncHandler( async() => {
         console.log(`👽 Database is connected to the host ${conObj.connection.host}`);
     }
     else{
-        console.log(`Database not connected!`);
+        console.log("Database not connected!");
     }
 })
 

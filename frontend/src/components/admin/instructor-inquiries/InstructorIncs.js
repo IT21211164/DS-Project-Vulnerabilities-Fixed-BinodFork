@@ -12,7 +12,7 @@ function InstructorIncs() {
   const fetchInquiries = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3500/learnup/api/course-management/contact-admin/admin/contacts`
+        "http://localhost:3500/learnup/api/course-management/contact-admin/admin/contacts"
       );
 
       if (response.data) {

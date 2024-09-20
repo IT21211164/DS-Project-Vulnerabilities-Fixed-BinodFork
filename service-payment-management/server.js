@@ -34,7 +34,7 @@ app.use(errorHandler);
 
 let serverPromise = new Promise((resolve, reject) => {
   mongoose.connection.once("open", () => {
-    console.log(`🚀 data connection with payments collection established! 🚀`);
+    console.log("🚀 data connection with payments collection established! 🚀");
     const server = app.listen(PORT, () => {
       console.log(
         `💰 Payment management service is up and running on port: ${PORT} 💰`
