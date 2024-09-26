@@ -61,7 +61,7 @@ function ShoppingCart() {
           <span
             className="insight-container"
             onClick={() => dispatch(clearCart())}
-            
+            role="button"
           >
             <span className="insight-icon">
               <GrPowerReset />
